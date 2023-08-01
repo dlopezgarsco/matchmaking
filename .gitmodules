@@ -5,3 +5,7 @@
 [submodule "matchmaking-server"]
 	path = matchmaking-server
 	url = https://github.com/dlopezgarsco/matchmaking-server.git
+
+[submodule "matchmaking-client"]
+	path = matchmaking-client
+	url = https://github.com/dlopezgarsco/matchmaking-client.git
