@@ -1,2 +1,8 @@
 #+title: Server
 #+author: Daniel Garsco
+
+* Responsabilities
+- [ ] Authorization/authentication
+- [ ] API Gateway
+- (?) Logging... could be a microservice on itself... need to think about it.
+- (?) Dispatch to MQ in case of service failure.

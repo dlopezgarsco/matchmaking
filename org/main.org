@@ -1,7 +1,6 @@
 #+title: Matchmaking Project
 #+author: Daniel Garsco
 
-* Matchmaking
 ** [2023-08-01 mar] Matchmaking draft
 
 What modules do I need?
@@ -13,35 +12,60 @@ How would they be split?
 - [-] model data
 
 ** [[file:./server/server.org][Server]]
-- [-] dummy microservice, mostly for config
-- [-] discovery? auth? session? orchestrator?
-- [-] db
+- [ ] mostly for config
+- [ ] discovery? auth? session?
 
 *** Endpoints
 #+begin_endpoint
 #+end_endpoint
 
 ** [[file:./dashboard/dashboard.org][Dashboard]]
-- [-] client dashboard for either user or facility (unsure)
-- [-] db
+- [ ] client dashboard for either user or facility (unsure)
+- [ ] db
 
 *** Endpoints
 #+begin_endpoint
 #+end_endpoint
 
 ** Matcher
-- [-] actual matchmaker, joins user + activity per location
-- [-] db
+- [ ] actual matchmaker, joins user + activity per location
+- [ ] db
 
 *** Endpoints
 #+begin_endpoint
 #+end_endpoint
 
 ** Payments
-- [-] mock
-- [-] db
+- [ ] mock
+- [ ] db
 
 *** Endpoints
 #+begin_endpoint
 #+end_endpoint
+
+** [2023-08-02 mie] Matchmaking draft
+
+Events come in two ways: fixed and dynamic.
+    Fixed: events that take place @ hour/time with a maximum quota.
+    Dynamic: events are arranged on the fly, requires quota to be filled first _then_ the event is created.
+
+Filters: once an attendee selects himself to be selectable for an event, a series of filters accompanied by the activity should be asked
+    i.e. price, hourly range, date range, location, etc.
+
+What are the vias an attendee can join an event? Some ideas:
+    Fixed:
+        - Interest + current location
+            Say interested in fashion, currently in Milan: match with parade
+        - Group forming
+            User selects a preset event (football, 5v5, skill level) and is paired with a group. (?) Can spots be reserved?
+
+Events:
+    - For dynamic events (i.e. football match)
+        (?) should the event take precedence over the matchmaking
+        (?) Can both coexist? (i.e. a match of 10 is lacking 3 members,create the event with a padding of 7)
+    - (?) Account for Online events as well? Think of an online seminar.
+    - (?) Are there events of events? Think of a conference with multiple seminars.
+
+Calendar:
+    Ideally, once the quota is filled, the matchmaker should push a date to the attendees.
 
