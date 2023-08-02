@@ -1,0 +1,47 @@
+#+title: Matchmaking Project
+#+author: Daniel Garsco
+
+* Matchmaking
+** [2023-08-01 mar] Matchmaking draft
+
+What modules do I need?
+How would they be split?
+
+* Modules
+
+** [[file:./core/core.org][Core]]
+- [-] model data
+
+** [[file:./server/server.org][Server]]
+- [-] dummy microservice, mostly for config
+- [-] discovery? auth? session? orchestrator?
+- [-] db
+
+*** Endpoints
+#+begin_endpoint
+#+end_endpoint
+
+** [[file:./dashboard/dashboard.org][Dashboard]]
+- [-] client dashboard for either user or facility (unsure)
+- [-] db
+
+*** Endpoints
+#+begin_endpoint
+#+end_endpoint
+
+** Matcher
+- [-] actual matchmaker, joins user + activity per location
+- [-] db
+
+*** Endpoints
+#+begin_endpoint
+#+end_endpoint
+
+** Payments
+- [-] mock
+- [-] db
+
+*** Endpoints
+#+begin_endpoint
+#+end_endpoint
+
