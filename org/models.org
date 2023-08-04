@@ -13,7 +13,7 @@
 
 *** Events
 <<Event>> { [[Address]] }
-# <<Attendee>> { [[User]] }
+<<Attendee>> { [[User]] }
 # <<Organizer>> { User }
 # <<Host>> { [[User]] }
 <<Tag>> {  }
